@@ -28,13 +28,13 @@ const Content = styled.div`
 `;
 const Title = styled.div`
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-bottom: px;
 `;
 const LogoImage = styled.div`
   margin-top: 10px;
 `;
 const Desc = styled.div`
-  margin: 40px 0;
+  margin: 30px 0;
   font-size: 24px;
   text-align: center;
 `;
@@ -78,8 +78,7 @@ const Results = () => {
           />
         </LogoImage>
         <Desc>
-          예비집사님과 찰떡궁합인 고양이는 {resultData.best}형 {resultData.name}
-          입니다.
+          당신의 MBTI는 {resultData.name}인 {resultData.best} 입니다.
         </Desc>
         <Desc>{resultData.desc}</Desc>
         <Button onClick={handleClickBtn}>테스트 다시하기</Button>

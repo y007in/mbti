@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
-import PangImage from "../assets/ggompang.jpeg";
+import homeimage from "../assets/homeimage.jpeg";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -33,15 +33,11 @@ const Title = styled.div`
 const LogoImage = styled.div`
   margin-top: 10px;
 `;
-const Desc = styled.div`
-  margin: 40px 0;
-  font-size: 24px;
-  text-align: center;
-`;
 const Button = styled.button`
   background-color: #778899;
   border: none;
   padding: 10px 50px;
+  margin: 40px 0;
   font-size: 24px;
   color: #fff;
   border-radius: 5px;
@@ -56,18 +52,17 @@ const Home = () => {
   };
   return (
     <Wrapper>
-      <Header>예비집사 판별기😻</Header>
+      <Header>💡 MBTI TEST 💡</Header>
       <Content>
-        <Title>나에게 맞는 주인님은??</Title>
+        <Title>당신의 MBTI는???</Title>
         <LogoImage>
           <img
             className="rounded-circle" //bootstrap
-            src={PangImage}
+            src={homeimage}
             width={350}
             height={350}
           />
         </LogoImage>
-        <Desc>MBTI를 기반으로 하는 나랑 잘 맞는 고양이 찾기</Desc>
         <Button onClick={handleClickBtn}>테스트 시작하기</Button>
       </Content>
     </Wrapper>
