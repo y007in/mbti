@@ -2,28 +2,53 @@ import React, { useState } from "react";
 import { createSearchParams, useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { ProgressBar, Button } from "react-bootstrap";
 import { QuestionData } from "../assets/data/questiondata";
 
 const Wrapper = styled.div`
-  height: 100vh;
   width: 100%;
+  height: 100vh;
+  background-color: #dcdcdc;
   font-family: "Yeon Sung", cursive;
+  padding-bottom: 70px;
+`;
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 const Title = styled.div`
-  font-size: 30px;
+  font-size: 32px;
   text-align: center;
+  margin: 100px 0 50px 0;
 `;
 const ButtonGroup = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
-const StyledButton = styled(Button)`
+const Button = styled.button`
   background-color: #778899;
   border: none;
   padding: 10px 50px;
-  font-size: 36px;
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  width: 40%;
+  max-width: 500px;
+  min-height: 300px;
+  margin-left: 20px;
+  &:hover {
+    background-color: #505b66;
+  }
+`;
+const ButtonHome = styled.button`
+  border: none;
+  background-color: #fff;
+  padding: 10px 50px;
+  border-radius: 5px;
+  margin: 100px 0;
 `;
 const Question = () => {
   const navigate = useNavigate();
@@ -60,83 +85,29 @@ const Question = () => {
       });
     }
   };
-  // const handleClickBtnA = (n, type) => {
-  //   if (type === "EI") {
-  //     //기존 스코어에 더할 값을 계산 (기존값 + 배점)
-  //     const addScore = totalScore[0].score + n;
-  //     //새로운 객체 생성
-  //     const newObject = { id: "EI", score: addScore };
-  //     //Splice 함수 활용, 새로운 객체로 대체
-  //     totalScore.splice(0, 1, newObject);
-  //   } else if (type === "SN") {
-  //     const addScore = totalScore[1].score + n;
-  //     const newObject = { id: "SN", score: addScore };
-  //     totalScore.splice(1, 1, newObject);
-  //   } else if (type === "TF") {
-  //     const addScore = totalScore[2].score + n;
-  //     const newObject = { id: "TF", score: addScore };
-  //     totalScore.splice(2, 1, newObject);
-  //   } else {
-  //     const addScore = totalScore[3].score + n;
-  //     const newObject = { id: "JP", score: addScore };
-  //     totalScore.splice(3, 1, newObject);
-  //   }
-  //   setQuestionNo(questionNo + 1);
-  // };
-  // const handleClickBtnB = (n, type) => {
-  //   if (type === "EI") {
-  //     //기존 스코어에 더할 값을 계산 (기존값 + 배점)
-  //     const addScore = totalScore[0].score + n;
-  //     //새로운 객체 생성
-  //     const newObject = { id: "EI", score: addScore };
-  //     //Splice 함수 활용, 새로운 객체로 대체
-  //     totalScore.splice(0, 1, newObject);
-  //   } else if (type === "SN") {
-  //     const addScore = totalScore[1].score + n;
-  //     const newObject = { id: "SN", score: addScore };
-  //     totalScore.splice(1, 1, newObject);
-  //   } else if (type === "TF") {
-  //     const addScore = totalScore[2].score + n;
-  //     const newObject = { id: "TF", score: addScore };
-  //     totalScore.splice(2, 1, newObject);
-  //   } else {
-  //     const addScore = totalScore[3].score + n;
-  //     const newObject = { id: "JP", score: addScore };
-  //     totalScore.splice(3, 1, newObject);
-  //   }
-  //   setQuestionNo(questionNo + 1);
-  // };
 
-  console.log(questionNo);
-  console.log(QuestionData.length);
+  const Count = () => {
+    return questionNo;
+  };
   return (
     <Wrapper>
-      <ProgressBar
-        striped
-        variant="danger"
-        now={(questionNo / QuestionData.length) * 100}
-        style={{ marginTop: "20px" }}
-      />
-      <Title>{QuestionData[questionNo].title}</Title>
-      <ButtonGroup>
-        <StyledButton
-          onClick={() => handleClickBtn(1, QuestionData[questionNo].type)}
-          style={{ width: "40%", minHeight: "200px", fontSize: "15px" }}
-        >
-          {QuestionData[questionNo].answera}
-        </StyledButton>
-        <StyledButton
-          onClick={() => handleClickBtn(0, QuestionData[questionNo].type)}
-          style={{
-            width: "40%",
-            minHeight: "200px",
-            fontSize: "15px",
-            marginLeft: "20px",
-          }}
-        >
-          {QuestionData[questionNo].answerb}
-        </StyledButton>
-      </ButtonGroup>
+      <progress value={Count()} max="12"></progress>
+      <Content>
+        <Title>{QuestionData[questionNo].title}</Title>
+        <ButtonGroup>
+          <Button
+            onClick={() => handleClickBtn(1, QuestionData[questionNo].type)}
+          >
+            {QuestionData[questionNo].answera}
+          </Button>
+          <Button
+            onClick={() => handleClickBtn(0, QuestionData[questionNo].type)}
+          >
+            {QuestionData[questionNo].answerb}
+          </Button>
+        </ButtonGroup>
+        <ButtonHome onClick={() => navigate("/")}>처음으로</ButtonHome>
+      </Content>
     </Wrapper>
   );
 };
