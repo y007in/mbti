@@ -25,7 +25,8 @@ const Title = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 20px;
 `;
 const Button = styled.button`
   background-color: #778899;
@@ -38,7 +39,7 @@ const Button = styled.button`
   width: 50%;
   max-width: 500px;
   min-height: 300px;
-  margin-left: 20px;
+  // margin-left: 20px;
   &:hover {
     background-color: #505b66;
   }

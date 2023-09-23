@@ -24,17 +24,17 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 70px;
+  padding: 30px;
 `;
 const Title = styled.div`
   font-size: 30px;
   margin-bottom: px;
 `;
 const LogoImage = styled.div`
-  margin-top: 10px;
+  margin: 20px 0;
 `;
 const Desc = styled.div`
-  margin: 30px 0;
+  margin-top: 5px;
   font-size: 24px;
   text-align: center;
 `;
@@ -42,6 +42,7 @@ const Button = styled.button`
   background-color: #778899;
   border: none;
   padding: 10px 50px;
+  margin-top: 10px;
   font-size: 24px;
   color: #fff;
   border-radius: 5px;
@@ -66,7 +67,7 @@ const Results = () => {
 
   return (
     <Wrapper>
-      <Header>예비집사 판별기😻</Header>
+      <Header>💡 MBTI TEST 💡</Header>
       <Content>
         <Title>결과보기</Title>
         <LogoImage>
