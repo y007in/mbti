@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   height: 100vh;
   background-color: #dcdcdc;
   font-family: "Yeon Sung", cursive;
+  padding-bottom: 70px;
 `;
 const Header = styled.div`
   display: flex;
@@ -20,30 +21,33 @@ const Header = styled.div`
   font-size: 32px;
 `;
 const Content = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 0 70px;
 `;
 const Title = styled.div`
-  font-size: 30px;
-  margin-bottom: px;
+  font-size: 48px;
+  margin-top: 50px;
 `;
 const LogoImage = styled.div`
-  margin: 20px 0;
+  margin: 40px 0;
 `;
 const Desc = styled.div`
   margin-top: 5px;
-  font-size: 24px;
+  font-size: 38px;
   text-align: center;
+  word-break: keep-all;
 `;
 const Button = styled.button`
   background-color: #778899;
   border: none;
   padding: 10px 50px;
-  margin-top: 10px;
-  font-size: 24px;
+  margin: 60px 0;
+  font-size: 32px;
   color: #fff;
   border-radius: 5px;
   &:hover {
@@ -74,8 +78,8 @@ const Results = () => {
           <img
             className="rounded-circle" //bootstrap
             src={resultData.image}
-            width={350}
-            height={350}
+            width={500}
+            height={500}
           />
         </LogoImage>
         <Desc>

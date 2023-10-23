@@ -12,34 +12,37 @@ const Wrapper = styled.div`
   padding-bottom: 70px;
 `;
 const Content = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 const Title = styled.div`
-  font-size: 32px;
+  font-size: 48px;
   text-align: center;
   margin: 100px 0 50px 0;
+  padding: 0 70px;
 `;
 const ButtonGroup = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  padding: 30px;
 `;
 const Button = styled.button`
   background-color: #778899;
   border: none;
-  padding: 10px 50px;
-  font-size: 24px;
+  padding: 30px;
+  font-size: 32px;
   color: #fff;
   letter-spacing: 2px;
   border-radius: 5px;
-  width: 50%;
-  max-width: 500px;
+  width: 100%;
   min-height: 300px;
-  // margin-left: 20px;
+  word-break: keep-all;
   &:hover {
     background-color: #505b66;
   }
@@ -50,6 +53,7 @@ const ButtonHome = styled.button`
   padding: 10px 50px;
   border-radius: 5px;
   margin: 100px 0;
+  font-size: 24px;
 `;
 const Question = () => {
   const navigate = useNavigate();
@@ -60,8 +64,6 @@ const Question = () => {
     { id: "TF", score: 0 },
     { id: "JP", score: 0 },
   ]);
-  // console.log(questionNo);
-  // console.log(totalScore);
 
   const handleClickBtn = (n, type) => {
     const newScore = totalScore.map((s) =>

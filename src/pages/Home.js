@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   height: 100vh;
   background-color: #dcdcdc;
   font-family: "Yeon Sung", cursive;
+  padding-bottom: 70px;
 `;
 const Header = styled.div`
   display: flex;
@@ -20,25 +21,27 @@ const Header = styled.div`
   font-size: 32px;
 `;
 const Content = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 70px;
+  padding: 0 70px;
 `;
 const Title = styled.div`
-  font-size: 30px;
+  font-size: 48px;
   margin-bottom: 30px;
 `;
 const LogoImage = styled.div`
-  margin-top: 10px;
+  margin: 80px 0;
 `;
 const Button = styled.button`
   background-color: #778899;
   border: none;
   padding: 10px 50px;
   margin: 40px 0;
-  font-size: 24px;
+  font-size: 32px;
   color: #fff;
   border-radius: 5px;
   &:hover {
@@ -59,8 +62,8 @@ const Home = () => {
           <img
             className="rounded-circle" //bootstrap
             src={homeimage}
-            width={350}
-            height={350}
+            width={500}
+            height={500}
           />
         </LogoImage>
         <Button onClick={handleClickBtn}>테스트 시작하기</Button>
