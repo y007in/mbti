@@ -4,8 +4,7 @@
 <h3>사용 스킬 </h3>
 <ul>
   <li>React</li>
-  <li>SCSS</li>
-  <li>Redux</li>
+  <li>styled-components</li>
 </ul>
 <h3>github</h3>
 https://github.com/y007in/mbti
