@@ -6,24 +6,21 @@ import { QuestionData } from "../assets/data/questiondata";
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #dcdcdc;
   font-family: "Yeon Sung", cursive;
-  padding-bottom: 70px;
 `;
+
 const Content = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 const Title = styled.div`
-  font-size: 48px;
-  text-align: center;
-  margin: 100px 0 50px 0;
-  padding: 0 70px;
+  font-size: 40px;
+  margin-top: 100px;
 `;
 const ButtonGroup = styled.div`
   display: flex;
@@ -36,7 +33,7 @@ const Button = styled.button`
   background-color: #778899;
   border: none;
   padding: 30px;
-  font-size: 32px;
+  font-size: 28px;
   color: #fff;
   letter-spacing: 2px;
   border-radius: 5px;

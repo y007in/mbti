@@ -6,10 +6,9 @@ import { ResultData } from "../assets/data/resultdata";
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #dcdcdc;
   font-family: "Yeon Sung", cursive;
-  padding-bottom: 70px;
 `;
 const Header = styled.div`
   display: flex;
@@ -22,23 +21,21 @@ const Header = styled.div`
 `;
 const Content = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 70px;
 `;
 const Title = styled.div`
   font-size: 48px;
-  margin-top: 50px;
+  margin-top: 20px;
 `;
 const LogoImage = styled.div`
-  margin: 40px 0;
+  margin: 20px 0;
 `;
 const Desc = styled.div`
   margin-top: 5px;
-  font-size: 38px;
+  font-size: 28px;
   text-align: center;
   word-break: keep-all;
 `;
@@ -46,7 +43,7 @@ const Button = styled.button`
   background-color: #778899;
   border: none;
   padding: 10px 50px;
-  margin: 60px 0;
+  margin: 30px 0;
   font-size: 32px;
   color: #fff;
   border-radius: 5px;
@@ -78,8 +75,9 @@ const Results = () => {
           <img
             className="rounded-circle" //bootstrap
             src={resultData.image}
-            width={500}
-            height={500}
+            width={300}
+            height={300}
+            alt={`${resultData.best}`}
           />
         </LogoImage>
         <Desc>
